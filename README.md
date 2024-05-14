@@ -1,94 +1,151 @@
-# EXP-2c                   SIMULATING ARP /RARP PROTOCOLS
-NAME:RAMYA.P
+# EXP NO:1                                                                      DATE: 5-2-24
+#                        Find the ASCII character of the given value.
+# AIM:
+To Write a C PROGRAM to find the ASCII character of the given value.
 
-REGISTER NUMBER: 212223240137
+# ALGORITHM:
+1.Start
+2. Declare integer variable n.
+3. Read integer input into n using scanf.
+4.Print character corresponding to ASCII value of n using printf.
+5.End
 
-DEPARTMENT: AIML
+# PROGRAM:
+#include <stdio.h>
+int main()
+{
+int n;
+scanf("%d",&n);
+printf("Character of ASCII Value %d is %c",n,n);
+return 0;
+}
+# OUTPUT:
 
-## AIM
-To write a python program for simulating ARP protocols using TCP.
-## ALGORITHM:
-## Client:
-1. Start the program
-2. Using socket connection is established between client and server.
-3. Get the IP address to be converted into MAC address.
-4. Send this IP address to server.
-5. Server returns the MAC address to client.
-## Server:
-1. Start the program
-2. Accept the socket which is created by the client.
-3. Server maintains the table in which IP and corresponding MAC addresses are
-stored.
-4. Read the IP address which is send by the client.
-5. Map the IP address with its MAC address and return the MAC address to client.
-P
-## PROGRAM - ARP
-## CLIENT:
-```
-import socket
-s=socket.socket()
-s.bind(('localhost',8000))
-s.listen(5)
-c,addr=s.accept()
-address={"165.165.80.80":"6A:08:AA:C2","165.165.79.1":"8A:BC:E3:FA"};
-while True:
-    ip=c.recv(1024).decode()
-    try:
-        c.send(address[ip].encode())
-    except KeyError:
-        c.send("Not Found".encode())
-```
-## SERVER:
-```
-import socket
-s=socket.socket()
-s.connect(('localhost',8000))
-while True:
-    ip=input("Enter logical Address : ")
-    s.send(ip.encode())
-    print("MAC Address",s.recv(1024).decode())
-```
+# RESULT:
+Thus,the ASCII value is executed successfully.
 
-## OUPUT - ARP
-## CLIENT:
-![image](https://github.com/23014107/2c.ARP_RARP_PROTOCOLS/assets/151625620/83eb6142-74c1-4dc0-afbd-a7defbe62d94)
+# EXP NO:2                                                             DATE:5-2-24
+#                    Find sum of three numbers
+# AIM: 
+To Write a PROGRAM to find sum of three numbers.
+# ALGORITHM:
+1.Start
+2. Declare integer variables n1, n2, n3, and sum.
+3.Read three integer inputs into n1, n2, and n3 using scanf.
+4. Calculate the sum of n1, n2, and n3 and store it in sum.
+5. Print the sum using printf.
+6.End
+# PROGRAM:
+#include <stdio.h>
+int main()
+{
+int n1,n2,n3,sum;
+scanf("%d %d %d",&n1,&n2,&n3);
+sum=n1+n2+n3;
+printf("Sum is:%d",sum);
+return 0;
+}
+# OUTPUT:
 
-## SERVER:
-![image](https://github.com/23014107/2c.ARP_RARP_PROTOCOLS/assets/151625620/046558f5-8b0c-4c8f-9797-636aa64e941d)
-## PROGRAM - RARP
-## CLIENT:
-```
-import socket
-s=socket.socket()
-s.bind(('localhost',9000))
-s.listen(5)
-c,addr=s.accept()
-address={"6A:08:AA:C2":"192.168.1.100","8A:BC:E3:FA":"192.168.1.99"};
-while True:
-    ip=c.recv(1024).decode()
-    try:
-        c.send(address[ip].encode())
-    except KeyError:
-        c.send("Not Found".encode())
-```
+# RESULT:
+Thus,the sum of three numbers is executed successfully
 
-## SERVER:
-```
-import socket
-s=socket.socket()
-s.connect(('localhost',9000))
-while True:
-    ip=input("Enter MAC Address : ")
-    s.send(ip.encode())
-    print("Logical Address",s.recv(1024).decode())
-```
-## OUPUT -RARP
-## CLIENT:
-![image](https://github.com/23014107/2c.ARP_RARP_PROTOCOLS/assets/151625620/60959f33-e982-4f55-9ec2-c824a7adf64e)
 
-## SERVER:
-![image](https://github.com/23014107/2c.ARP_RARP_PROTOCOLS/assets/151625620/b1770b46-b787-4f41-8901-276b39c9ea57)
+# EXP NO : 3                                               DATE:6-2-24
 
-## RESULT
-Thus, the python program for simulating ARP protocols using TCP was successfully 
-executed.
+#             C PROGRAM to check whether the grade is A grade
+# AIM:
+To Write a C PROGRAM to check whether the grade is A grade using simple if statement.
+# ALGORITHM:
+1.Start.
+2. Declare a character variable a.
+3. Read a character input into a using scanf.
+4. Check if the value of a is equal to 'A' using an if statement.
+5. If a is equal to 'A', print the message "Grade is A" using printf.
+6.End.
+
+# PROGRAM:
+
+#include<stdio.h>
+int main()
+{
+char a;
+scanf("%c",&a);
+if(a=='A');
+printf(" Grade is %c",a);
+return 0;
+}
+
+# OUTPUT:
+
+# RESULT:
+Thus,grade is executed successfully
+
+
+# EXP NO:4                                                                  DATE:6-2-24
+#                     C PROGRAM to read N value and check that value is equal to 10 or not
+# AIM:
+To Write a C PROGRAM to read N value and check that value is equal to 10 or not using if-else.
+
+# ALGORITHM:
+1.Start
+2.Declare an integer variable ‘N’
+3.Read an integer input into ‘N’ using ‘scanf’
+4.Check if the value of N is equal to 10 using an if statement.
+5. If N is equal to 10, print the message "Given number is TEN." using printf.
+6. If N is not equal to 10, print the message "Given number is NOT TEN." using printf.
+7.End
+
+# PROGRAM:
+#include<stdio.h>
+int main()
+{
+int N;
+scanf("%d",&N);
+if(N==10)
+printf("Given number is TEN.");
+else
+printf("Given number is NOT TEN.");
+return 0;
+}
+
+# OUTPUT:
+
+
+# RESULT:
+
+Thus,the required PROGRAM is written and executed successfully.
+
+
+# EXP NO:5                                               DATE:7-2-24
+#                Find principle amount
+# AIM:
+To Write a C PROGRAM to find principle amount based on compound interest, time & rate of interest.
+# ALGORITHM:
+1.Start
+2. Declare variables: principal amount (P), time in years (t), rate of interest per annum (r), and
+compound interest (CI).
+3. Read P, t, and r from the user.
+4.Calculate rate using this formula,rate=rate/100
+5.calculate principle using this formula, principle=compound/(pow(1+rate,time))
+6. Print the calculated principal amount.
+7.End
+# PROGRAM:
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+float principle,rate,time,compound;
+scanf("%f",&compound);
+scanf("%f",&time);
+scanf("%f",&rate);
+rate=rate/100;
+principle=compound/(pow(1+rate,time));
+printf("Principle Amount is = %.2f",principle);
+return 0;
+}
+# OUTPUT:
+
+# RESULT:
+Thus,the principle amount is written and executed successfully.
+
